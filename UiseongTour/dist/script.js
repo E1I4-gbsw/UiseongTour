@@ -1,13 +1,8 @@
-/**
- * Author: Michael Hadley, mikewesthad.com
- * Asset Credits:
- *  - Tuxemon, https://github.com/Tuxemon/Tuxemon
- */
-
+//설정
 const config = {
   type: Phaser.AUTO,
-  width: 800,
-  height: 600,
+  width: "100%",
+  height: "100%",
   parent: "game-container",
   pixelArt: true,
   physics: {
@@ -29,7 +24,9 @@ let player;
 let showDebug = false;
 
 function preload() {
+  //타일셋 이미지
   this.load.image("tiles", "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/tilesets/tuxmon-sample-32px-extruded.png");
+  //타일셋 위치 정하는 json 파일
   this.load.tilemapTiledJSON("map", "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/tilemaps/tuxemon-town.json");
 
   // An atlas is a way to pack multiple images together into one texture. I'm using it to load all
@@ -37,6 +34,8 @@ function preload() {
   //  https://labs.phaser.io/view.html?src=src/animation/texture%20atlas%20animation.js
   // If you don't use an atlas, you can do the same thing with a spritesheet, see:
   //  https://labs.phaser.io/view.html?src=src/animation/single%20sprite%20sheet.js
+  
+  //캐릭터 아틀라스
   this.load.atlas("atlas", "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/atlas/atlas.png", "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/atlas/atlas.json");
 }
 
@@ -129,9 +128,9 @@ function create() {
     setAlpha(0.75).
     setDepth(20);
     worldLayer.renderDebug(graphics, {
-      tileColor: null, // Color of non-colliding tiles
-      collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
-      faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
+      tileColor: null, //충돌되지 않는 타일의 색
+      collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // 충돌되는 타일의 색
+      faceColor: new Phaser.Display.Color(40, 39, 37, 255) // 충돌되는 면 가장자리의 색
     });
   });
 }
@@ -143,14 +142,14 @@ function update(time, delta) {
   // Stop any previous movement from the last frame
   player.body.setVelocity(0);
 
-  // Horizontal movement
+  //수평 이동
   if (cursors.left.isDown) {
     player.body.setVelocityX(-speed);
   } else if (cursors.right.isDown) {
     player.body.setVelocityX(speed);
   }
 
-  // Vertical movement
+  // 수직 이동
   if (cursors.up.isDown) {
     player.body.setVelocityY(-speed);
   } else if (cursors.down.isDown) {

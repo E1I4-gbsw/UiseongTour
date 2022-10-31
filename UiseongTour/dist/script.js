@@ -29,11 +29,13 @@ function preload() {
   //타일셋 위치 정하는 json 파일
   this.load.tilemapTiledJSON("map", "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/tilemaps/tuxemon-town.json");
 
-  // An atlas is a way to pack multiple images together into one texture. I'm using it to load all
-  // the player animations (walking left, walking right, etc.) in one image. For more info see:
-  //  https://labs.phaser.io/view.html?src=src/animation/texture%20atlas%20animation.js
-  // If you don't use an atlas, you can do the same thing with a spritesheet, see:
-  //  https://labs.phaser.io/view.html?src=src/animation/single%20sprite%20sheet.js
+  // 아틀라스: 여러 이미지를 하나의 텍스처로 묶는 방법
+
+  // 하나의 이미지에서 플레이어 애니메이션(왼쪽으로 걷기, 오른쪽으로 걷기 등).
+  //      참조링크: https://labs.phaser.io/view.html?src=src/animation/texture%20atlas%20animation.js
+  
+  // 아틀라스를 사용하지 않는 경우 스프라이트시트로 동일한 작업을 수행 가능.
+  //      참조링크:  https://labs.phaser.io/view.html?src=src/animation/single%20sprite%20sheet.js
   
   //캐릭터 아틀라스
   this.load.atlas("atlas", "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/atlas/atlas.png", "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/atlas/atlas.json");
@@ -42,8 +44,8 @@ function preload() {
 function create() {
   const map = this.make.tilemap({ key: "map" });
 
-  // Parameters are the name you gave the tileset in Tiled and then the key of the tileset image in
-  // Phaser's cache (i.e. the name you used in preload)
+  // 매개변수는 Tiled에서 타일셋에 지정한 이름과 다음에서 타일셋 이미지의 키.
+  // Phaser의 캐시(예: 사전 로드에서 사용한 이름)
   const tileset = map.addTilesetImage("tuxmon-sample-32px-extruded", "tiles");
 
   // Parameters: layer name (or index) from Tiled, tileset, x, y
@@ -53,27 +55,28 @@ function create() {
 
   worldLayer.setCollisionByProperty({ collides: true });
 
-  // By default, everything gets depth sorted on the screen in the order we created things. Here, we
-  // want the "Above Player" layer to sit on top of the player, so we explicitly give it a depth.
-  // Higher depths will sit on top of lower depth objects.
+  // 기본적으로 모든 것은 우리가 생성한 순서대로 화면에서 깊이 정렬됨.
+  // "Above Player" 레이어가 플레이어 위에 놓이길 원하므로 명시적으로 깊이를 지정.
+  // 더 깊은 깊이는 더 얕은 깊이 객체 위에 놓임.(1 위에 2)
   aboveLayer.setDepth(10);
 
-  // Object layers in Tiled let you embed extra info into a map - like a spawn point or custom
-  // collision shapes. In the tmx file, there's an object layer with a point named "Spawn Point"
+  // Tiled의 객체 레이어를 사용하면 생성 지점이나 사용자 지정과 같은 추가 정보를 지도에 포함 가능.
+  // 충돌 모양. tmx 파일에는 "Spawn Point"라는 이름의 점이 있는 개체 레이어 존재.
   const spawnPoint = map.findObject("Objects", obj => obj.name === "Spawn Point");
 
-  // Create a sprite with physics enabled via the physics system. The image used for the sprite has
-  // a bit of whitespace, so I'm using setSize & setOffset to control the size of the player's body.
+  // 물리 시스템을 통해 물리가 활성화된 스프라이트를 만듬.
+  // 스프라이트에 사용된 이미지는 약간의 공백이 있으므로 setSize 및 setOffset을 사용하여 플레이어의 몸 크기를 제어.
+  
   player = this.physics.add.
   sprite(spawnPoint.x, spawnPoint.y, "atlas", "misa-front").
   setSize(30, 40).
   setOffset(0, 24);
 
-  // Watch the player and worldLayer for collisions, for the duration of the scene:
+  // 장면이 지속되는 동안 플레이어와 worldLayer가 충돌하는지 확인.
   this.physics.add.collider(player, worldLayer);
 
-  // Create the player's walking animations from the texture atlas. These are stored in the global
-  // animation manager so any sprite can access them.
+  // 텍스처 아틀라스에서 플레이어의 걷기 애니메이션을 만듬.
+  // 이들은 전역에 저장. 모든 스프라이트가 액세스할 수 있도록 애니메이션 관리자.
   const anims = this.anims;
   anims.create({
     key: "misa-left-walk",
@@ -106,7 +109,7 @@ function create() {
 
   cursors = this.input.keyboard.createCursorKeys();
 
-  // Help text that has a "fixed" position on the screen
+  // 화면에서 "fixed" 위치에 있는 도움말 텍스트 (하얀박스 안의 글자)
   this.add.
   text(16, 16, 'Arrow keys to move\nPress "D" to show hitboxes', {
     font: "18px monospace",
@@ -119,10 +122,10 @@ function create() {
 
   // Debug graphics
   this.input.keyboard.once("keydown-D", event => {
-    // Turn on physics debugging to show player's hitbox
+    // 플레이어의 히트박스를 표시하려면 물리 디버깅을 켜기.
     this.physics.world.createDebugGraphic();
 
-    // Create worldLayer collision graphic above the player, but below the help text
+    // 플레이어 위에 있지만 도움말 텍스트 아래에는 worldLayer 충돌 그래픽을 만듬.
     const graphics = this.add.
     graphics().
     setAlpha(0.75).
@@ -139,7 +142,7 @@ function update(time, delta) {
   const speed = 175;
   const prevVelocity = player.body.velocity.clone();
 
-  // Stop any previous movement from the last frame
+  // 마지막 프레임에서 이전 이동을 중지.
   player.body.setVelocity(0);
 
   //수평 이동
@@ -156,10 +159,10 @@ function update(time, delta) {
     player.body.setVelocityY(speed);
   }
 
-  // Normalize and scale the velocity so that player can't move faster along a diagonal
+  // 플레이어가 대각선을 따라 더 빠르게 이동할 수 없도록 속도를 정규화하고 크기를 조정.
   player.body.velocity.normalize().scale(speed);
 
-  // Update the animation last and give left/right animations precedence over up/down animations
+  // 애니메이션을 마지막으로 업데이트하고 위/아래 애니메이션보다 왼쪽/오른쪽 애니메이션을 우선.
   if (cursors.left.isDown) {
     player.anims.play("misa-left-walk", true);
   } else if (cursors.right.isDown) {
@@ -171,7 +174,7 @@ function update(time, delta) {
   } else {
     player.anims.stop();
 
-    // If we were moving, pick and idle frame to use
+    // 우리가 움직이고 있다면 사용할 프레임을 선택하고 사용되지 않는 상태로 만듬.
     if (prevVelocity.x < 0) player.setTexture("atlas", "misa-left");else
     if (prevVelocity.x > 0) player.setTexture("atlas", "misa-right");else
     if (prevVelocity.y < 0) player.setTexture("atlas", "misa-back");else

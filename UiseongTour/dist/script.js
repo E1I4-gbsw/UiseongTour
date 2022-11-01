@@ -8,13 +8,20 @@ const config = {
   physics: {
     default: "arcade",
     arcade: {
-      gravity: { y: 0 } } },
+      //중력 : 멈춰있을떄 캐릭터가 향하는 방향
+      //0: 이전 입력과 같은 방향
+      gravity: { y: 0 } } 
+    },
 
 
   scene: {
     preload: preload,
     create: create,
-    update: update } };
+    update: update } 
+  
+  };
+
+
 
 
 
@@ -38,7 +45,8 @@ function preload() {
   //      참조링크:  https://labs.phaser.io/view.html?src=src/animation/single%20sprite%20sheet.js
   
   //캐릭터 아틀라스
-  this.load.atlas("atlas", "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/atlas/atlas.png", "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/atlas/atlas.json");
+  //원래 캐릭터: "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/atlas/atlas.png"
+  this.load.atlas("atlas", "../asset/player.png", "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/atlas/atlas.json");
 }
 
 function create() {

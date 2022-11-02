@@ -46,7 +46,7 @@ function preload() {
   
   //캐릭터 아틀라스
   //원래 캐릭터: "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/atlas/atlas.png"
-  this.load.atlas("atlas", "../asset/player.png", "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/atlas/atlas.json");
+  this.load.atlas("atlas", "../asset/img/char/player.png", "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/atlas/atlas.json");
 }
 
 function create() {
@@ -150,7 +150,7 @@ function update(time, delta) {
   const speed = 175;
   const prevVelocity = player.body.velocity.clone();
 
-  // 마지막 프레임에서 이전 이동을 중지.
+  // 마지막 프레임에서 이전 이동을 중지. 
   player.body.setVelocity(0);
 
   //수평 이동

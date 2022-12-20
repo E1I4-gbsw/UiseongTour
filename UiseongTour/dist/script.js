@@ -34,8 +34,8 @@ function preload() {
   //타일셋 위치 정하는 json 파일
   this.load.tilemapTiledJSON(
     "map",
-    "https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/tilemaps/tuxemon-town.json"
-    //"../asset/json/untitled.json"
+    //"https://mikewesthad.github.io/phaser-3-tilemap-blog-posts/post-1/assets/tilemaps/tuxemon-town.json"
+    "../asset/json/water.json"
   );
 
   // 아틀라스: 여러 이미지를 하나의 텍스처로 묶는 방법

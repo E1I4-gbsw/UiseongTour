@@ -6,16 +6,15 @@
 ## 에셋
 
 ### 내부 에셋
-
 + 2D 에셋<br>
-![이미지이름](이미지경로)
+이미지이름<br>
+<img src="https://user-images.githubusercontent.com/86923398/208624595-4b463831-fdce-498f-93b9-04aacd98f5b7.png" width="30%" height="30%"/><br>
 + 오디오 에셋
-
 
 ### 외부 에셋
 + 2D 에셋 <br>
-![이미지이름](이미지경로)<br>
-[하이퍼 링크](링크주소)<br>
+[moderninteriors](https://limezu.itch.io/moderninteriors)<br>
+[modernoffice](https://limezu.itch.io/modernoffice)<br>
 
 + 오디오 에셋<br>
 [하이퍼 링크](링크주소)

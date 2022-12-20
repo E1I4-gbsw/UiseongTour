@@ -5,7 +5,7 @@
 
 ## 에셋
 
-### 내부 에셋
+### 제작 에셋
 + 2D 에셋<br>
 moon<br>
 <img src="https://user-images.githubusercontent.com/86923398/208624595-4b463831-fdce-498f-93b9-04aacd98f5b7.png" width="30%" height="30%"/><br>

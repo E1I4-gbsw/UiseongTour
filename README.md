@@ -8,15 +8,11 @@
 ### 제작 에셋
 + 2D 에셋<br>
 moon<br>
-<img src="https://user-images.githubusercontent.com/86923398/208624595-4b463831-fdce-498f-93b9-04aacd98f5b7.png" width="30%" height="30%"/><br>
-+ 오디오 에셋
+<img src="https://user-images.githubusercontent.com/86923398/208624595-4b463831-fdce-498f-93b9-04aacd98f5b7.png" width="30%" height="30%"/><br><br><br>
 
 ### 외부 에셋
 + 2D 에셋 <br>
 [moderninteriors](https://limezu.itch.io/moderninteriors)<br>
-[modernoffice](https://limezu.itch.io/modernoffice)<br>
+[modernoffice](https://limezu.itch.io/modernoffice)<br><br>
 은하수<br>
 <img src="https://user-images.githubusercontent.com/86923398/208625913-9350a6d8-ff14-4ccf-9e33-cf4ce7349f3d.jpg" width="30%" height="30%"/><br>
-
-+ 오디오 에셋<br>
-[하이퍼 링크](링크주소)

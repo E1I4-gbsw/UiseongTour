@@ -1,18 +1,46 @@
-# Uiseong Tour Guide Web Game
-## 프로젝트 계획이유
+# game-maps
 
-> 의성군에서 거의 대부분의 시간을 보내지만 정작 의성에 어떤 시설들이 있는지 모르고 있다. 또한 의성에 처음 방문하는 관광객들께 어디에 어떤 장소가 있고, 의성을 소개하기 위해 "UTGW(Uiseong Tour Guide Web Game)"이라는 게임을 만들게 되었다.
+An untitled HTML5 RPG game 🎮️ in development 👩‍💻🧑‍💻️
 
-## 에셋
+- ▶️ Demo here: [ohiofi.github.io/game-maps/index.html](https://ohiofi.github.io/game-maps/index.html)
 
-### 제작 에셋
-+ 2D 에셋<br>
-moon<br>
-<img src="https://user-images.githubusercontent.com/86923398/208624595-4b463831-fdce-498f-93b9-04aacd98f5b7.png" width="30%" height="30%"/><br><br><br>
+- 🗺️ Map Maker here: [ohiofi.github.io/game-maps/mapMaker.html](https://ohiofi.github.io/game-maps/mapMaker.html)
 
-### 외부 에셋
-+ 2D 에셋 <br>
-[moderninteriors](https://limezu.itch.io/moderninteriors)<br>
-[modernoffice](https://limezu.itch.io/modernoffice)<br><br>
-은하수<br>
-<img src="https://user-images.githubusercontent.com/86923398/208625913-9350a6d8-ff14-4ccf-9e33-cf4ce7349f3d.jpg" width="30%" height="30%"/><br>
+
+Any volunteer can add more maps to the game if they like. Maps could be maze-like ([example](http://mikesrpgcenter.com/ffantasy/maps/waterfallcave.html)) or create a simple RPG-town ([example](http://mikesrpgcenter.com/ffantasy/maps/coneria.html)).
+
+Info and Guidelines:
+
+- 🎃 You must be familiar with Javascript strings and arrays
+- 🎃 You must follow the Map Symbols in the README for map creation
+- 🎃 Add your map to the maps.js file
+
+
+```
+MAP SYMBOLS:
+♀ : player spawn point
+= : brick
+c : cliff
+g : tall grass
+G : gravestone/tombstone
+h : hen/chicken
+k : kitty
+p : path/cobblestone
+r : rock
+^ : roof shingles
+t : small tree
+T : big tree
++ : dead tree
+w : water
+0 : door to current world level 0
+1 : door to current world level 1
+2 : door to current world level 2
+3 : door to current world level 3
+4 : door to current world level 4
+5 : door to current world level 5
+6 : door to current world level 6
+7 : door to current world level 7
+8 : door to current world level 8
+9 : door to current world level 9
+① : warp to world 1-0
+```

@@ -67,7 +67,7 @@ let maps = [
     {
       showTitleScreen: true,
       bgImage: "cave", //either "grass", "sand", "cave"
-      map:["T T +  g  g     g t  t", 
+      map:["T T +  g  g     g t  t",
           "   T  + r  r  r  r  t ", 
           "T +               t  +", 
           "  T + r  r  r +g + gt ", 

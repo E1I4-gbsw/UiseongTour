@@ -20,53 +20,25 @@ let myFont;
 let startButton;
 
 function preload() {
-  images.bigtree = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/bigtree01.png"
-  );
-  images.black = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/black.png"
-  );
-  images.brick = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/wall2.png"
-  );
-  images.cat1 = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cat1.png"
-  );
-  images.cat2 = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cat2.png"
-  );
-  images.cavebg = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cavetile.png"
-  );
-  images.chicken1 = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/chicken1.png"
-  );
-  images.chicken2 = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/chicken2.png"
-  );
-  images.cliff = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cliff.png"
-  );
-  images.cobblestone = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cobblestone01.png"
-  );
+  images.bigtree = loadImage("/images/bigtree01.png");
+  images.black = loadImage("/images/black.png");
+  images.brick = loadImage("/images/wall2.png");
+  images.cat1 = loadImage("/images/cat1.png");
+  images.cat2 = loadImage("/images/cat2.png");
+  images.cavebg = loadImage("/images/cavetile.png");
+  images.chicken1 = loadImage("/images/chicken1.png");
+  images.chicken2 = loadImage("/images/chicken2.png");
+  images.cliff = loadImage("/images/cliff.png");
+  images.cobblestone = loadImage("/images/cobblestone01.png");
 
-  images.deadtree = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/spookytree02.png"
-  );
-  images.deadtree2 = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/spookytree03.png"
-  );
+  images.deadtree = loadImage("/images/spookytree02.png");
+  images.deadtree2 = loadImage("/images/spookytree03.png");
   images.deadtree2 = loadImage(
     "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fspookytree3.png?v=1573012947346"
   );
 
-  images.gravestone = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/pixelgrave02.png"
-  );
-  images.grassbg = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/grass1.png"
-  );
+  images.gravestone = loadImage("/images/pixelgrave02.png");
+  images.grassbg = loadImage("/images/grass1.png");
 
   images.hero1 = loadImage("/images/heroStand.png");
   images.hero2 = loadImage("/images/heroRun2.png");
@@ -74,34 +46,16 @@ function preload() {
   images.hero4 = loadImage("/images/heroRun4.png");
   images.hero5 = loadImage("/images/heroStand2.png");
 
-  images.rock = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/bigrock01.png"
-  );
+  images.rock = loadImage("/images/bigrock01.png");
 
-  images.roof = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/roof1.png"
-  );
-  images.sandbg = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/sandtile.png"
-  );
-  images.smalltree = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/smalltree2.png"
-  );
-  images.stump = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/stump2.png"
-  );
-  images.stump2 = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/stump2.png"
-  );
-  images.tallgrass = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/tallgrass02.png"
-  );
-  images.water = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/water2.png"
-  );
-  images.water2 = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/water2.png"
-  );
+  images.roof = loadImage("/images/roof1.png");
+  images.sandbg = loadImage("/images/sandtile.png");
+  images.smalltree = loadImage("/images/smalltree2.png");
+  images.stump = loadImage("/images/stump2.png");
+  images.stump2 = loadImage("/images/stump2.png");
+  images.tallgrass = loadImage("/images/tallgrass02.png");
+  images.water = loadImage("/images/water2.png");
+  images.water2 = loadImage("/images/water2.png");
 
   myFont = loadFont(
     "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2FpressStart.ttf?v=1571872754647"
@@ -117,7 +71,7 @@ function setup() {
     images.hero1,
     images.hero2,
     images.hero3,
-    images.hero4,
+    //images.hero4,
     //images.hero5,
   ]);
   player.spawn();

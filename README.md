@@ -1,6 +1,6 @@
 # Uiseong Tour Guide Web Game
-### 🎮 https://genuine-marshmallow-81b206.netlify.app
-### 📃 https://e1i4-gbsw.github.io/
+### 🎮  https://genuine-marshmallow-81b206.netlify.app
+### 📃  https://e1i4-gbsw.github.io/
 
 <br>
 

@@ -1,9 +1,12 @@
 # Uiseong Tour Guide Web Game
 ## 프로젝트 계획이유
 
+🎮 https://genuine-marshmallow-81b206.netlify.app
+https://E1I4-gbsw
+
+
 > 의성군에서 거의 대부분의 시간을 보내지만 정작 의성에 어떤 시설들이 있는지 모르고 있다. 또한 의성에 처음 방문하는 관광객들께 어디에 어떤 장소가 있고, 의성을 소개하기 위해 "UTGW(Uiseong Tour Guide Web Game)"이라는 게임을 만들게 되었다.
 
-https://genuine-marshmallow-81b206.netlify.app
 
 ## 에셋
 

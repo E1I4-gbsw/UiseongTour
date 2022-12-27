@@ -33,9 +33,9 @@ function preload() {
 
   images.deadtree = loadImage("/images/spookytree02.png");
   images.deadtree2 = loadImage("/images/spookytree03.png");
-  images.deadtree2 = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fspookytree3.png?v=1573012947346"
-  );
+  //images.deadtree2 = loadImage(
+  //  "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fspookytree3.png?v=1573012947346"
+  //);
 
   images.gravestone = loadImage("/images/pixelgrave02.png");
   images.grassbg = loadImage("/images/grass1.png");

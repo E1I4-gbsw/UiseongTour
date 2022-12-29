@@ -64,6 +64,32 @@ class Level {
             )
           );
           break;
+          case "f":
+            this.map[tempRowNum].push(
+              new Wall(
+                column,
+                tempRowNum,
+                3,
+                1.25,
+                Sprite.randomDirection(),
+                false, // flipY
+                images.f1
+            )
+          );
+          break;
+          case "e":
+            this.map[tempRowNum].push(
+              new Wall(
+                column,
+                tempRowNum,
+                3,
+                1.25,
+                Sprite.randomDirection(),
+                false, // flipY
+                images.f1
+            )
+          );
+          break;
         case "h":
           this.movers[tempRowNum].push(
             new Mover(
@@ -78,6 +104,48 @@ class Level {
           );
 
           this.map[tempRowNum].push(false);
+          break;
+
+        case "i":
+          this.map[tempRowNum].push(
+            new Wall(
+              column,
+              tempRowNum,
+              3,
+              1.25,
+              Sprite.randomDirection(),
+              false,  // flipY
+              images.i
+            )
+          );
+          break;
+
+        case "j":
+          this.map[tempRowNum].push(
+            new Wall(
+              column,
+              tempRowNum,
+              3,
+              1.25,
+              Sprite.randomDirection(1),
+              false,  // flipY
+              images.j
+            )
+          );
+            break;
+
+        case "n":
+          this.map[tempRowNum].push(
+            new Wall(
+              column,
+              tempRowNum,
+              3,
+              1.25,
+              Sprite.randomDirection(),
+              false, // flipY
+              images.n
+          )
+        );
           break;
         case "k":
           this.movers[tempRowNum].push(

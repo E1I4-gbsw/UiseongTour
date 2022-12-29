@@ -68,7 +68,7 @@ let maps = [
       showTitleScreen: true,
       bgImage: "sand", //either "grass", "sand", "cave"
       map:[
-      "tttttttttttttttttttttttttttttt=^^^^^^^^^^^^^^^^^^^", 
+      "feeeeeeeeeeeeeeeeeeeeeeeeeeeef=^^^^^^^^^^^^^^^^^^^", 
       "pppppppppppppppppppppppppppppp=^^^^^^^^^^^^^^^^^^^", 
       "pppppppppppppppppppppppppppppp=^^^^^^^^^^^^^^^^^^^", 
       "pppppppppppppppppppppppppppppp0^^^^^^^^^^^^^^^^^^^", 
@@ -77,16 +77,17 @@ let maps = [
       "pppppppppppppppppppppppppppppp=^^^^^^^^^^^^^^^^^^^", 
       "pppppppppppppppppppppppppppppp=^^^^^^^^^^^^^^^^^^^", 
       "pppppppppppppppppppppppppppppp=^^^^^^^^^^^^^^^^^^^", 
-      "Ttttttttttt        ttttttttttt====================",
-      "T                                                T", 
-      "T                                                T", 
-      "T                                                T", 
-      "T                                                T", 
-      "T                                                T", 
-      "T                                                T", 
-      "T                                                T", 
-      "T                                                T", 
-      "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
+      "feeeeeeeeeee      eeeeeeeeeeee====================", 
+      "t                                                t", 
+      "t                                                t", 
+      "t                                                t", 
+      "t                                                t", 
+      "t                                                t", 
+      "t                                                t", 
+      "t                                                t", 
+      "t                                                t", 
+      "t                                                t", 
+      "teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeet"
     ],
     },
     // world 0 level 2, cave background tile

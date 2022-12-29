@@ -56,6 +56,11 @@ function preload() {
   images.tallgrass = loadImage("/images/tallgrass02.png");
   images.water = loadImage("/images/water2.png");
   images.water2 = loadImage("/images/water2.png");
+  images.f1 = loadImage("/images/f1.png");
+  images.e = loadImage("/images/e.png");
+  images.n = loadImage("/images/n.png");
+  images.i = loadImage("/images/i.png");
+  images.j = loadImage("/images/j.png");
 
   myFont = loadFont(
     "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2FpressStart.ttf?v=1571872754647"

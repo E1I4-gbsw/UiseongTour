@@ -30,15 +30,30 @@ function preload() {
   images.chicken2 = loadImage("/images/chicken2.png");
   images.cliff = loadImage("/images/cliff.png");
   images.cobblestone = loadImage("/images/cobblestone01.png");
+  
+  images.Moon = loadImage("/images/test.png");
+  images.Line = loadImage("/images/line.png");
 
   images.deadtree = loadImage("/images/spookytree02.png");
   images.deadtree2 = loadImage("/images/spookytree03.png");
-  //images.deadtree2 = loadImage(
-  //  "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fspookytree3.png?v=1573012947346"
-  //);
+  images.deadtree2 = loadImage(
+    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fspookytree3.png?v=1573012947346"
+  );
 
   images.gravestone = loadImage("/images/pixelgrave02.png");
   images.grassbg = loadImage("/images/grass1.png");
+  
+  images.cwater = loadImage("/images/cwater.png");
+  images.bluetent = loadImage("/images/bluetent.png");
+  images.cdari = loadImage("/images/cdari.png");
+  images.trees = loadImage("/images/trees.png");  
+  images.cmarket = loadImage("/images/cmarket.png");
+  images.alonetree = loadImage("/images/alonetree.png");
+  images.baigetent = loadImage("/images/baigetent.png");
+  images.campingA = loadImage("/images/campingA.png");
+
+
+
 
   images.hero1 = loadImage("/images/heroStand.png");
   images.hero2 = loadImage("/images/heroRun2.png");

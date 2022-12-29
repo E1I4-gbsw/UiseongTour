@@ -103,6 +103,7 @@ class Level {
           // );
           this.map[tempRowNum].push(false);
           break;
+
         case "p":
           this.map[tempRowNum].push(
             new Sprite(
@@ -116,6 +117,21 @@ class Level {
             )
           );
           break;
+
+          case "d":
+            this.map[tempRowNum].push(
+              new Sprite(
+                column, // x
+                tempRowNum, // y
+                0, // z
+                2, // size
+                Sprite.randomDirection(), // direction
+                round(random()), // flipY
+                [images.cdari]
+              )
+            );
+            break;
+
         case "r":
           this.map[tempRowNum].push(
             new Wall(
@@ -129,6 +145,92 @@ class Level {
             )
           );
           break;
+
+          case "e":
+          this.map[tempRowNum].push(
+            new Wall(
+              column,
+              tempRowNum,
+              1,
+              6,
+              Sprite.randomDirection(),
+              false, // flipY
+              images.cmarket
+            )
+          );
+          break;
+
+          case "b":
+          this.map[tempRowNum].push(
+            new Wall(
+              column,
+              tempRowNum,
+              1,
+              2,
+              0,
+              false, // flipY
+              images.bluetent
+            )
+          );
+          break;
+
+          case "u":
+          this.map[tempRowNum].push(
+            new Wall(
+              column,
+              tempRowNum,
+              1,
+              1.5,
+              0,
+              false, // flipY
+              images.baigetent
+
+            )
+          );
+          break;
+
+           case "x":
+          this.map[tempRowNum].push(
+            new Sprite(
+              column, // x
+              tempRowNum,// y
+              0, // z
+              4, // size
+              0, // direction
+              round(random()), // flipY
+              [images.campingA]
+            )
+          );
+          break;
+
+        case "M":
+          this.map[tempRowNum].push(
+            new Wall(
+              column,
+              tempRowNum,
+              1,
+              5,
+              1,
+              false, // flipY
+              images.Moon
+            )
+          );
+          break;
+
+          case "L":
+          this.map[tempRowNum].push(
+            new Wall(
+              column,
+              tempRowNum,
+              1,
+              1,
+              1,
+              false, // flipY
+              images.Line
+            )
+          );
+          break;
+
         case "T":
           this.map[tempRowNum].push(
             new Wall(
@@ -142,6 +244,35 @@ class Level {
             )
           );
           break;
+
+          case "s":
+            this.map[tempRowNum].push(
+              new Wall(
+                column,
+                tempRowNum,
+                2,
+                4,
+                Sprite.randomDirection(),
+                false, // flipY
+                images.trees
+              )
+            );
+            break;
+
+            case "a":
+          this.map[tempRowNum].push(
+            new Wall(
+              column,
+              tempRowNum,
+              2,
+              2.45,
+              Sprite.randomDirection(),
+              false, // flipY
+              images.alonetree
+            )
+          );
+          break;
+
         case "t":
           this.map[tempRowNum].push(
             new Wall(
@@ -153,7 +284,6 @@ class Level {
               false, // flipY
 
               Sprite.choice([images.stump, images.stump2])
-
             )
           );
           break;
@@ -170,6 +300,21 @@ class Level {
             )
           );
           break;
+
+          case "i":
+          this.map[tempRowNum].push(
+            new Wall(
+              column, // x
+              tempRowNum, // y
+              0, // z
+              1, // size
+              Sprite.randomDirection(), // direction
+              round(random()), // flipY
+              Sprite.choice([images.cwater])
+            )
+          );
+          break;
+
         case "|":
           this.map[tempRowNum].push(
             new Wall(
